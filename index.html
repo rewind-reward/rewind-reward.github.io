@@ -145,14 +145,17 @@
           </p> -->
           <p>
             We introduce ReWiND, a framework for learning robot manipulation tasks solely from language instructions without per-task demonstrations. 
-            Standard reinforcement learning (RL) and imitation learning methods require expert supervision through human-designed reward functions or 
-            demonstrations for every new task. In contrast, ReWiND starts from a small demonstration dataset to learn: (1) a data-efficient, 
+            <!-- Standard reinforcement learning (RL) and imitation learning methods require expert supervision through human-designed reward functions or 
+            demonstrations for every new task. In contrast,  -->
+            ReWiND starts from a small demonstration dataset to learn: (1) a data-efficient, 
             language-conditioned reward function that labels the dataset with rewards, and (2) a language-conditioned policy pre-trained with offline 
             RL using these rewards. Given an unseen task variation, ReWiND fine-tunes the pre-trained policy using the learned reward function, 
             requiring minimal online interaction. We show that ReWiND's reward model generalizes effectively to unseen tasks, 
             outperforming baselines by up to <b>2.4X</b> in reward generalization and policy alignment metrics. 
-            Finally, we demonstrate that ReWiND enables sample-efficient adaptation to new tasks in both simulation and on a real bimanual manipulation platform, 
-            taking a step towards scalable, real-world robot learning.
+            Finally, we demonstrate that ReWiND enables sample-efficient adaptation to new tasks, 
+            beating baselines by <b>2X</b> in simulation and improving real-world
+            pretrained bimanual policies by <b>5X</b>, taking a step towards scalable, real-world
+            robot learning. 
           </p>
         </div>
       </div>
