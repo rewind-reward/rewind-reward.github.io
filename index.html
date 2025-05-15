@@ -144,9 +144,9 @@
             deforming scene using photos/videos captured casually from mobile phones.
           </p> -->
           <p>
-            We introduce ReWiND, a framework for learning robot manipulation tasks solely from language instructions without per-task demonstrations. 
-            ReWiND learns a language-conditioned reward model and pre-trains a policy from a small set of demonstrations, 
-            enabling efficient adaptation to new tasks with minimal online interaction via the learned reward function.
+            ReWiND enables sample-efficient adaptation to new tasks by training a language-conditioned reward model and policy from a small set of demonstrations to 
+            learn <b>new tasks</b> without additional per-task demonstrations.
+            We beat baselines by <b>2X</b> in simulation and improve real-world pre-trained policies by <b>5X</b> in just 1 hour.
             <!-- We introduce ReWiND, a framework for learning robot manipulation tasks solely from language instructions without per-task demonstrations.  -->
             <!-- Standard reinforcement learning (RL) and imitation learning methods require expert supervision through human-designed reward functions or 
             demonstrations for every new task. In contrast,  -->
@@ -266,6 +266,7 @@
     </div>
     In each environment, we train the reward model with just 5 demonstrations for each of 20 tasks. 
     All environments are <b>image based, without ground truth state information</b>.
+    We perform offline-to-online RL for all environments.
     <br>
     <b>(a) MetaWorld:</b> MetaWorld provides large set of tabletop manipulation tasks in simulation.
     <br>
@@ -277,8 +278,8 @@
   <div class="container is-max-desktop">
       <h4 class="title is-4 has-text-centered">Meta-World RL Results</h4> 
       <p>
-        ReWiND achieves 79% success rate after 100k environment steps on 8 unseen tasks in Meta-World, about 2x better than the best baseline.
-        We also find it is more sample efficient than all baselines.
+        ReWiND achieves 79% success rate after 100k environment steps on 8 unseen tasks in Meta-World, 2x better than the best baseline.
+        It is also more sample efficient than all baselines.
       </p>
       <div class="content has-text-centered">
         <div class="columns is-centered">
@@ -460,7 +461,7 @@
         <p>
           We consider various metrics for analyzing reward models with offline videos and encourage looking at the paper for more details.
           We consider analyzing the reward models across three axes: (1) Demo Video Reward Alignment, (2) Policy Rollout Reward Ranking, and (3) Input Robustness.
-          We find that ReWiND outperforms the baselines on all three axes, and ReWiND with Open-X data performs better than the one with only MetaWorld data on Rebustness.
+          We find that ReWiND outperforms the baselines on all three axes, and ReWiND with Open-X data performs better than the one with only MetaWorld data on Robustness.
         </p>
         <br />
 
