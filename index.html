@@ -148,8 +148,8 @@
             <!-- Standard reinforcement learning (RL) and imitation learning methods require expert supervision through human-designed reward functions or 
             demonstrations for every new task. In contrast,  -->
             ReWiND starts from a small demonstration dataset to learn: (1) a data-efficient, 
-            language-conditioned reward function that labels the dataset with rewards, and (2) a language-conditioned policy pre-trained with offline 
-            RL using these rewards. Given an unseen task variation, ReWiND fine-tunes the pre-trained policy using the learned reward function, 
+            language-conditioned reward function that labels the dataset with rewards, and  a language-conditioned policy pre-trained with offline 
+            RL using these rewards. (2)  Given an unseen task variation, ReWiND fine-tunes the pre-trained policy using the learned reward function, 
             requiring minimal online interaction. 
             <!-- We show that ReWiND's reward model generalizes effectively to unseen tasks, 
             outperforming baselines by up to <b>2.4X</b> in reward generalization and policy alignment metrics. 
