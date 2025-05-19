@@ -227,7 +227,7 @@
             and assigns 0 progress to misaligned video-language pairs.
           </p>
           <p>
-            <b>Offline dataset relabeling & pre-training.</b> We use the trained reward model to label offline dataset with rewards and pre-train a 
+            <b>Offline dataset relabeling & pre-training.</b> We use the trained reward model to label the offline dataset with rewards and pre-train a 
             language-conditioned policy using offline RL (IQL).
           </p>
           <p>
@@ -235,7 +235,15 @@
             For an unseen task, we fine-tune the policy with online rollouts and reward labels from the reward model.
           </p>
         </div>
+        <h3 class="title is-4 has-text-centered">Video Rewinding</h3>
+        <p>We split a video into forward and reverse sections to generate failure trajectories and decreasing progress from only successful demonstrations, allowing ReWiND to provide dense reward feedback even when the policy is making mistakes. Check out our ablations in the paper for more details, but video rewinding improves policy rollout rankings when comparing estimated rewards for successful, near-successful, and failure trajectories.</p>
+        <div class="content has-text-centered">
+          <video id="teaser_video" width=66% muted autoplay loop controls style="border-radius:10px;" margin="auto">
+            <source src="./static/videos/video_rewind.mov">
+          </video>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
