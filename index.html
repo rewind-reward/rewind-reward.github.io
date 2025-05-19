@@ -90,14 +90,14 @@
             </span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Southern California,</span>
-            <span class="author-block"><sup>2</sup>Amazon Robotics</span>
+            <span class="author-block"><sup>1</sup>University of Southern California, </span>
+            <span class="author-block"><sup>2</sup>Amazon Robotics, </span>
             <span class="author-block"><sup>3</sup>KAIST</span>
           </div>
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href=""
+                <a href="https://arxiv.org/abs/2505.10911"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -124,7 +124,7 @@
   <div class="container is-max-desktop">
     <div class="is-centered has-text-centered">
       <video id="teaser_video" width=100% muted autoplay controls style="border-radius:10px;" margin="auto">
-        <source src="./static/videos/timelapse.mp4">
+        <source src="./static/videos/website_intro.mp4">
       </video>
     </div>
   </div>
@@ -227,7 +227,7 @@
             and assigns 0 progress to misaligned video-language pairs.
           </p>
           <p>
-            <b>Offline dataset relabeling & pre-training.</b> We use the trained reward model to label offline dataset with rewards and pre-train a 
+            <b>Offline dataset relabeling & pre-training.</b> We use the trained reward model to label the offline dataset with rewards and pre-train a 
             language-conditioned policy using offline RL (IQL).
           </p>
           <p>
@@ -235,7 +235,15 @@
             For an unseen task, we fine-tune the policy with online rollouts and reward labels from the reward model.
           </p>
         </div>
+        <h3 class="title is-4 has-text-centered">Video Rewinding</h3>
+        <p>We split a video into forward and reverse sections to generate failure trajectories and decreasing progress from only successful demonstrations, allowing ReWiND to provide dense reward feedback even when the policy is making mistakes. Check out our ablations in the paper for more details, but video rewinding improves policy rollout rankings when comparing estimated rewards for successful, near-successful, and failure trajectories.</p>
+        <div class="content has-text-centered">
+          <video id="teaser_video" width=66% muted autoplay loop controls style="border-radius:10px;" margin="auto">
+            <source src="./static/videos/video_rewind.mov">
+          </video>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -315,7 +323,7 @@
       <div class="content has-text-centered">
         <div class="columns is-centered">
           <div class="column">
-            <img src="./static/images/real_robot_results.png"
+            <img src="./static/images/real_robot_results.jpg"
                 class="interpolation-image"
                 alt="Interpolate start reference image.">
             </img>
